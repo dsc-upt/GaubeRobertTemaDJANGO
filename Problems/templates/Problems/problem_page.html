@@ -5,16 +5,22 @@
     <link rel="stylesheet" href="{% static "Problems/problem.css" %}">
 {% endblock %}
 
-{% block title %} {{title}} {% endblock %}
+{% block title %} {{problem.title}} {% endblock %}
 {% block content %}
     <div class="full">
-        <h1>{{title}}</h1>
+        <h1>{{problem.title}}</h1>
+        <h1><font color="red">{{text}}</font></h1>
         <div class="problems">
-            <table cellspacing="10px">
-                <tr>
-                    <th>Problema</th>
-                </tr>
-            </table>
+            <p style="padding:20px">{{problem.description}}</p>
+            <p style="padding:20px 0 10px 20px">Trimite o solutie:</p>
+            <div class="form-control">
+                <form action="/problem/{{problem.id}}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="source">Introduce-ti un fisier cpp</label>
+                    <input type="file" name="source" />
+                    <button>Trimite</button>
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

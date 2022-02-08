@@ -1,0 +1,25 @@
+{% extends 'Problems/base.html' %}
+{% load static %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Problems/index.css' %}">
+    <link rel="stylesheet" href="{% static 'Problems/answers.css' %}">
+{% endblock %}
+{% block title %} Raspuns {% endblock %}
+
+{% block content %}
+<div class="full">
+    <h1> SCOR </h1>
+    <div class="problems">
+        <table cellspacing="10px">
+            {% for answer in answers %}
+            <tr>
+                <th>Testul nr {{answer.index}}</th>
+                <th>{% if answer.value %}<font color="green">Corect</font>
+                    {% else %}<font color="red">Gresit</font>
+                    {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

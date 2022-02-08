@@ -12,5 +12,5 @@ class Problem(models.Model):
     test_data_in = models.FileField(upload_to="files/test_data_in")
     test_data_out = models.FileField(upload_to="files/test_data_out")
     
-    def get_url(self):
-        return reverse("problem", args=[self.slug])
+    def __str__(self):
+        return self.title
