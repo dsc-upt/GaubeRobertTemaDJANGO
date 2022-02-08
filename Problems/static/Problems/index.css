@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    transition: all 0.2s;
+}
+a:hover{
+    color: gray;
+}
+.title{
+    width: 100%;
+}
+th{
+    font-weight: 400;
+    border-bottom: 1px solid gray;
+    padding: 15px;
+}
+.first{
+    font-weight: 600;
+}
+.problems{
+    margin: auto;
+    max-width: 600px;
+    background-color: #C1DEAE;
+    border-radius: 15px;
+}
+.full{
+    margin: auto;
+    max-width: 800px;
+    background-color: #219F94;
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
