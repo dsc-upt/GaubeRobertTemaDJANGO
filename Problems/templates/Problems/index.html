@@ -17,8 +17,8 @@
                 </tr>
                 {% for problem in problems%}
                 <tr>
-                    <th class="title"><a href = "problem/{{problem}}">{{problem}}</a></th>
-                    <th>5</th>
+                    <th class="title"><a href = "problem/{{problem.id}}">{{problem.title}}</a></th>
+                    <th>{{problem.rating}}</th>
                 </tr>
                 {% endfor %}
             </table>
